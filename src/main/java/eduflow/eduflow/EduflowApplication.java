@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class EduflowApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(EduflowApplication.class, args);
 	}
 
