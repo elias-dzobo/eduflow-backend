@@ -3,17 +3,17 @@ package eduflow.eduflow.models;
 import java.sql.Date;
 
 public class Replies {
+
+    private int reply_id;
     private int question_id;
     private int user_id;
     private String reply;
     private Date created_at;
     private Date updated_at;
 
-    public Replies(int question_id, int user_id, String reply, Date created_at) {
+    public Replies(int question_id, int user_id, String reply) {
         this.question_id = question_id;
         this.user_id = user_id;
-        this.reply = reply;
-        this.created_at = created_at;
     }
 
 
