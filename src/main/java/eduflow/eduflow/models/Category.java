@@ -1,6 +1,8 @@
 package eduflow.eduflow.models;
 
 public class Category {
+
+    private Integer category_id;
     private String category;
     private String icon;
 

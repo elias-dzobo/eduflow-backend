@@ -19,5 +19,10 @@ public class UserService {
         return userRepo.save(newUser);
     }
 
+    public Users getUserByUsername(String username) {
+        return userRepo.getUserByUsername(username);
+    }
+
+
 
 }
