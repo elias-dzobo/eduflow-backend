@@ -12,7 +12,7 @@ public class Users implements Serializable {
     private String password;
 
 
-    public Users(String username, String email, String password) {
+    public Users() {
         this.username = username;
         this.email = email;
         this.password = password;

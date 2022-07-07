@@ -1,6 +1,7 @@
 package eduflow.eduflow.Service;
 
 import eduflow.eduflow.Repo.UserRepo;
+import eduflow.eduflow.dto.RegisterRequest;
 import eduflow.eduflow.models.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -8,15 +9,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
 
-    private final UserRepo userRepo;
-
     @Autowired
-    public UserService(UserRepo userRepo) {
-        this.userRepo = userRepo;
-    }
-
-    public Users addNewUser(Users newUser) {
-        return userRepo.save(newUser);
+    private UserRepo userRepo;
+    public void createUser(RegisterRequest registerRequest) {
+        Users user = new Users();
+        user.setUsername(registerRequest.getUsername());
+        user.setPassword(registerRequest.getPassword());
+        user.setEmail(registerRequest.getEmail());
+        userRepo.save(user);
     }
 
     public Users getUserByUsername(String username) {
